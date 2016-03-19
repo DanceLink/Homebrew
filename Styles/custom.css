@@ -1,0 +1,3 @@
+textarea { resize:none; }
+
+#inputEmail, #inputSubject, #inputBody { width:100%; }
