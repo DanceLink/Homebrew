@@ -7,21 +7,6 @@
   <link rel="stylesheet" type="text/css" href=".\bootstrap-3.3.6-dist\css\bootstrap-theme.min.css" />
   <link rel="stylesheet" type="text/css" href=".\Styles\normalze.css" />
   <link rel="stylesheet" type="text/css" href=".\Styles\custom.css" />
-  <script>
-    var emailAddress = document.getElementById("inputEmail");
-    var subject = document.getElementById("inputSubject").replace(" ", "%20");
-    var messageBody = document.getElementById("inputBody").replace(" ", "%20");
-    var submit = document.getElementById("sendEmail");
-
-    console.log("Email Address: " + emailAddress);
-    console.log("Subject Line: " + subject);
-    console.log("Message Body: " + messageBody);
-    console.log(submit);
-
-    if(submit.onClick()){
-      submit.href = "mailto:developer.awright@hotmail.com?Subject=" + subject + "&body=" + messageBody + "&cc=" + emailAddress;
-    }
-  </script>
 </head>
 <body>
   <div class="container-fluid">
@@ -51,7 +36,7 @@
       </div>
       <div class="col-md-4">
         <h3 class="text-center">Email me:</h3>
-        <form action="" class="form-inline">
+        <form action="" class="form-inline" name="myForm">
           <table>
             <div class="form-group">
               <tr>
@@ -82,7 +67,7 @@
       </div>
       <div class="col-md-4 text-center">
         <h3>When you're ready...</h3>
-        <a href="" class="btn btn-primary" id="sendEmail">Send Email</a>
+        <a href="javascript: submitform();" class="btn btn-primary" id="sendEmail">Send Email</a>
       </div>
     </div>
   </div>
@@ -91,5 +76,6 @@
   <script type="text/javascript" src=".\Scripts\jQuery-2.2.1.min.js"></script>
   <script type="text/javascript" src=".\Scripts\bower.json"></script>
   <script type="text/javascript" src=".\bootstrap-3.3.6-dist\js\bootstrap.min.js"></script>
+  <script type="text/javascript" src=".\Scripts\email.js"></script>
 </body>
 </html>
